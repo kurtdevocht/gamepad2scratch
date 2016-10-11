@@ -1,0 +1,18 @@
+{
+  "extensionName": "Gamepad2Scratch",
+  "extensionPort": 15005,
+  "blockSpecs": [
+    [ "b", "Button %m.button of controller %m.controller", "button", "˂", 1 ],
+    [ "r", "%m.axis -axis of %m.joystick joystick of controller %m.controller", "joystick", "x", "left", "1" ],
+    [ "r", "Angle of %m.joystick joystick of controller %m.controller", "joystick_angle", "left", "1" ],
+    [ "r", "Controllers", "gamepads" ],
+    [ "b", "Controller %m.controller is analog", "analog", 1 ],
+  ],
+
+  "menus": {
+    "button": [ "˄", "˃", "˅", "˂", "1", "2", "3", "4", "joystick_left", "joystick_right", "l1", "l2", "r1", "r2", "select", "start" ],
+    "axis": ["x","y"],
+    "joystick": [ "left", "right" ],
+    "controller": [ "1", "2", "3", "4" ]
+  }
+}

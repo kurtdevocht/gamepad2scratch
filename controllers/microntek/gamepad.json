@@ -1,0 +1,111 @@
+{
+    "vendorID": 121,
+    "productID": 6,
+    "joysticks": [
+        {
+            "name": "joystick_left",
+            "x": {
+                "pin": 0
+            },
+            "y": {
+                "pin": 1
+            }
+        },
+        {
+            "name": "joystick_right",
+            "x": {
+                "pin": 3
+            },
+            "y": {
+                "pin": 4
+            }
+        }
+    ],
+    "buttons": [
+        {
+            "name": "1",
+            "pin": 5,
+            "bitmask": 16
+        },
+        {
+            "name": "2",
+            "pin": 5,
+            "bitmask": 32
+        },
+        {
+            "name": "3",
+            "pin": 5,
+            "bitmask": 64
+        },
+        {
+            "name": "4",
+            "pin": 5,
+            "bitmask": 128
+        },
+        {
+            "name": "l1",
+            "pin": 6,
+            "bitmask": 1
+        },
+        {
+            "name": "l2",
+            "pin": 6,
+            "bitmask": 4
+        },
+        {
+            "name": "r1",
+            "pin": 6,
+            "bitmask": 2
+        },
+        {
+            "name": "r2",
+            "pin": 6,
+            "bitmask": 8
+        },
+        {
+            "name": "select",
+            "pin": 6,
+            "bitmask": 16
+        },
+        {
+            "name": "start",
+            "pin": 6,
+            "bitmask": 32
+        },
+        {
+            "name": "joystick_left_button",
+            "pin": 6,
+            "bitmask": 64
+        },
+        {
+            "name": "joystick_right_button",
+            "pin": 6,
+            "bitmask": 128
+        },
+        
+         {
+            "name": "up",
+            "pin": 5,
+            "bitmask": 15,
+            "values": [7,0,1]
+        },
+        {
+            "name": "right",
+            "pin": 5,
+            "bitmask": 15,
+            "values": [1,2,3]
+        },
+         {
+            "name": "down",
+            "pin": 5,
+            "bitmask": 15,
+            "values": [3,4,5]
+        },
+        {
+            "name": "left",
+            "pin": 5,
+            "bitmask": 15,
+            "values": [5,6,7]
+        }
+    ]
+}
