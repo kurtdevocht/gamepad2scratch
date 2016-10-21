@@ -12,11 +12,11 @@
  */
 
 // load our dependencies into scope
-const HID = require( 'node-hid' );
-const EventEmitter = require( 'events' ).EventEmitter;
-const util = require( 'util' );
-const fs = require( 'fs' );
-const path = require( 'path' );
+var HID = require( 'node-hid' );
+var EventEmitter = require( 'events' ).EventEmitter;
+var util = require( 'util' );
+var fs = require( 'fs' );
+var path = require( 'path' );
 
 
 
@@ -200,10 +200,10 @@ Gamepad.prototype._processButtons = function( data ) {
         isPressed = false;
 
         // What's the value of the pin?
-        let pinValue = data[button.pin];
+        var pinValue = data[button.pin];
 
         // Do we need to apply a bitmask on the value?
-        let bitmask = 255;
+        var bitmask = 255;
         if( 'bitmask' in button ){
             bitmask = button.bitmask;
         }

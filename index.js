@@ -1,7 +1,7 @@
-const GamepadState = require( './GamepadState.js');
-const express = require('express');
-const process = require('process');
-const colors = require('colors');
+var GamepadState = require( './GamepadState.js');
+var express = require('express');
+var process = require('process');
+var colors = require('colors');
 
 var gamepadStates;
 var  expressApp;
@@ -21,7 +21,7 @@ function launchHttpInterface(){
     expressApp.get('/poll', function(req, res){
         res.set('Content-Type', 'text/plain');
 
-        let body = buildStateString(gamepadStates);
+        var body = buildStateString(gamepadStates);
         body += 'gamepads ' + gamepadStates.length.toString() + '\n';
         res.send(body);
     });

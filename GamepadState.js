@@ -6,7 +6,7 @@
         - Some specific calculations are added to allow a more streamlined user experience for both analog and non-alaog mode
 */
 
-const Gamepad = require('./Gamepad.js');
+var Gamepad = require('./Gamepad.js');
 
 function GamepadState(type, index){
     this._gamepad = new Gamepad(type);
@@ -87,7 +87,7 @@ GamepadState.prototype._xyToAngle = function(x, y){
     if( x == 0 && y == 0) {
         return 90;
     }
-    let result = 180 * Math.atan2(x, y) / Math.PI;
+    var result = 180 * Math.atan2(x, y) / Math.PI;
     return isNaN(result) ? 90 : result;
     
 }
