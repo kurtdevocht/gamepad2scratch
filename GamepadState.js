@@ -9,11 +9,22 @@
 var Gamepad = require('./Gamepad.js');
 
 function GamepadState(type, index){
-    this._gamepad = new Gamepad(type);
+   this._type = type;
+   this._index = index;
+   this.init();
+}
+
+GamepadState.prototype.init = function(){
+    try {
+    this._gamepad = new Gamepad(this._type);
     this._state = {"joystick_left":{},"joystick_right":{}};
-    this._index = index;
     this._hookUpEvents();
     this._gamepad.connect();
+    }
+    catch( error ) {
+        console.log( "Failed to connect to device...")
+        setTimeout( ()=>this.init(), 2000);
+    }
 }
 
 // Converts the state to a string that can be understood by the Scratch 2.0 http interface
@@ -262,8 +273,12 @@ GamepadState.prototype._hookUpEvents = function(){
         if( data.x === 127 ){
             this._state.analog = false;
         }
+
+        
        
     }.bind(this));
+
+    this._gamepad.on('error', (error)=>{console.log("xxxxxx - " + error); this.init()});
 
 }
 

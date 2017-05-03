@@ -148,6 +148,7 @@ Gamepad.prototype.connect = function() {
     this._loadConfiguration();
     this._usb = new HID.HID( this._config.vendorID, this._config.productID );
     this._usb.on( 'data', this._onControllerFrame.bind( this ) );
+    this._usb.on( 'error', (error)=>this.emit( 'error', error ));
     this.emit( 'connected' );
 
     return this;
